@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 
 const ConnectFour = ({ rows, columns }) => {
   const initialBoard = useMemo(() => {
@@ -15,6 +15,10 @@ const ConnectFour = ({ rows, columns }) => {
   const [player, setPlayer] = useState("x");
   const [board, setBoard] = useState(initialBoard);
   const [gameOver, setGameOver] = useState(false);
+
+  useEffect(() => {
+    handleReset();
+  }, [rows, columns]);
 
   const isGameOver = (updatedBoard, row, column) => {
     // Checking vertically
