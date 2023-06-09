@@ -89,11 +89,10 @@ const ConnectFour = ({ rows, columns }) => {
       if (board[i][columnIndex] == "*") {
         let updatedBoard = getBoardCopy();
         updatedBoard[i][columnIndex] = player;
+        setBoard(updatedBoard);
         if (isGameOver(updatedBoard, i, columnIndex)) {
           setGameOver(true);
-          setBoard(updatedBoard);
         } else {
-          setBoard(updatedBoard);
           setPlayer(player === "x" ? "o" : "x");
         }
         return;
