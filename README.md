@@ -1,6 +1,6 @@
 # Connect4
 
-[Demo](https://keshav137.github.io/react-dropdown/)
+[Demo](https://keshav137.github.io/connect-four/)
 
 ## Setup
 
