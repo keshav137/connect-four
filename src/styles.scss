@@ -18,8 +18,16 @@
   gap: 5px;
 }
 
-.block {
+.button-block {
   min-height: 40px;
+  box-sizing: border-box;
+  min-width: 40px;
+}
+
+.block {
+  border: 1px solid;
+  min-height: 40px;
+  box-sizing: border-box;
   min-width: 40px;
 }
 

@@ -6,7 +6,7 @@ const ConnectFour = ({ rows, columns }) => {
     for (let i = 0; i < rows; i++) {
       grid.push([]);
       for (let j = 0; j < columns; j++) {
-        grid[i].push("-");
+        grid[i].push("");
       }
     }
     return grid;
@@ -90,7 +90,7 @@ const ConnectFour = ({ rows, columns }) => {
   const handleOnClick = (event) => {
     const columnIndex = event.target.id;
     for (let i = rows - 1; i > -1; i--) {
-      if (board[i][columnIndex] == "-") {
+      if (board[i][columnIndex] == "") {
         let updatedBoard = getBoardCopy();
         updatedBoard[i][columnIndex] = player;
         setBoard(updatedBoard);
@@ -116,7 +116,7 @@ const ConnectFour = ({ rows, columns }) => {
     inputButtons.push(
       <button
         disabled={gameOver}
-        className="block"
+        className="button-block"
         id={i}
         onClick={handleOnClick}
       ></button>
