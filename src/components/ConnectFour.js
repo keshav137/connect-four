@@ -129,20 +129,22 @@ const ConnectFour = ({ rows, columns }) => {
 
   return (
     <div>
-      <h2>Connect 4</h2>
+      <h3>Connect 4</h3>
       <div className="board">
         <div className="board-row">{inputButtons}</div>
         {matrix}
-        {gameOver ? (
-          <div>
-            <div>Player {player} won</div>
+        <div className="game-text">
+          {gameOver ? (
             <div>
-              <button onClick={handleReset}>Reset Game</button>
+              <div>Player {player} won</div>
+              <div>
+                <button onClick={handleReset}>Reset Game</button>
+              </div>
             </div>
-          </div>
-        ) : (
-          <div>Next Turn: {player}</div>
-        )}
+          ) : (
+            <div>Next Turn: {player}</div>
+          )}
+        </div>
       </div>
     </div>
   );
